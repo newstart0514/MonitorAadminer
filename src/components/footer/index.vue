@@ -1,5 +1,5 @@
 <template>
-  <a-layout-footer class="footer">Arco Pro</a-layout-footer>
+  <a-layout-footer class="footer">2023-2024&nbsp;©&nbsp;智能出行安全监控系统_幽离</a-layout-footer>
 </template>
 
 <script lang="ts" setup></script>

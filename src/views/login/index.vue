@@ -3,9 +3,10 @@
     <div class="logo">
       <img
         alt="logo"
-        src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/dfdba5317c0c20ce20e64fac803d52bc.svg~tplv-49unhts6dw-image.image"
+        style="width: 30px;"
+        src="https://s2.loli.net/2024/01/19/236uKiZFcmO1Bjh.png"
       />
-      <div class="logo-text">Arco Design Pro</div>
+      <div class="logo-text">智能出行安全监控系统</div>
     </div>
     <LoginBanner />
     <div class="content">
@@ -62,9 +63,10 @@
 
     &-text {
       margin-right: 4px;
-      margin-left: 4px;
+      margin-left: 8px;
       color: var(--color-fill-1);
-      font-size: 20px;
+      font-weight: 600;
+      font-size: 17px;
     }
   }
 </style>
