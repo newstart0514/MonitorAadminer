@@ -28,9 +28,6 @@
         saveAsImage: { show: true },
       },
     },
-    legend: {
-      data: ['Evaporation', 'Precipitation', 'Temperature'],
-    },
     xAxis: [
       {
         type: 'category',

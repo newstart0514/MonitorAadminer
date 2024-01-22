@@ -4,7 +4,7 @@
       <div class="panel">
         <MapContainer />
       </div>
-      <a-grid :cols="24" :col-gap="16" :row-gap="16" style="margin-top: 16px">
+      <a-grid :cols="24" :col-gap="16" :row-gap="16" style="margin-top: 16px;">
         <a-grid-item
           :span="{ xs: 24, sm: 24, md: 24, lg: 12, xl: 12, xxl: 12 }"
         >
@@ -22,6 +22,11 @@
         <a-grid-item :span="24">
           <div class="panel moduler-wrap">
             <dangerDate />
+          </div>
+        </a-grid-item>
+        <a-grid-item :span="24">
+          <div class="panel moduler-wrap">
+            <TravelData />
           </div>
         </a-grid-item>
       </a-grid>
@@ -50,6 +55,7 @@
   import DangerDate from './components/dangerDate.vue';
   import PersonalTravel from './components/personalTravel.vue';
   import TeamTravel from './components/teamTravel.vue';
+  import TravelData from './components/travelData.vue';
 </script>
 
 <script lang="ts">
