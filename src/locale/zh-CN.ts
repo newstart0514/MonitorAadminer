@@ -2,6 +2,7 @@ import localeMessageBox from '@/components/message-box/locale/zh-CN';
 import localeLogin from '@/views/login/locale/zh-CN';
 
 import localeWorkplace from '@/views/dashboard/workplace/locale/zh-CN';
+import localeDateview from '@/views/dashboard/dataView/locale/zh-CN';
 
 import localeSettings from './zh-CN/settings';
 
@@ -17,12 +18,12 @@ export default {
   'menu.profile': '详情页',
   'menu.visualization': '数据可视化',
   'menu.user': '个人中心',
-  'menu.arcoWebsite': 'Arco Design',
-  'menu.faq': '常见问题',
+  'menu.dataView': '',
   'navbar.docs': '文档中心',
   'navbar.action.locale': '切换为中文',
   ...localeSettings,
   ...localeMessageBox,
   ...localeLogin,
   ...localeWorkplace,
+  ...localeDateview,
 };

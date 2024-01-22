@@ -31,6 +31,9 @@
       type: String,
       default: '100%',
     },
+    func: {
+      type: Function,
+    },
   });
   // const appStore = useAppStore();
   // const theme = computed(() => {

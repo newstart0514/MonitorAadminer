@@ -8,11 +8,11 @@
         <a-avatar :size="54" class="col-avatar">
           <img
             alt="avatar"
-            src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/288b89194e657603ff40db39e8072640.svg~tplv-49unhts6dw-image.image"
+            src="//s2.loli.net/2024/01/19/yEefVjmD4cUsCWG.png"
           />
         </a-avatar>
         <a-statistic
-          :title="$t('workplace.onlineContent')"
+          :title="$t('workplace.travelers')"
           :value="373.5"
           :precision="1"
           :value-from="0"
@@ -33,11 +33,11 @@
         <a-avatar :size="54" class="col-avatar">
           <img
             alt="avatar"
-            src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/fdc66b07224cdf18843c6076c2587eb5.svg~tplv-49unhts6dw-image.image"
+            src="//s2.loli.net/2024/01/19/xcnbRw1STmzUrJH.png"
           />
         </a-avatar>
         <a-statistic
-          :title="$t('workplace.putIn')"
+          :title="$t('workplace.groupTrips')"
           :value="368"
           :value-from="0"
           animation
@@ -57,11 +57,11 @@
         <a-avatar :size="54" class="col-avatar">
           <img
             alt="avatar"
-            src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/77d74c9a245adeae1ec7fb5d4539738d.svg~tplv-49unhts6dw-image.image"
+            src="//s2.loli.net/2024/01/19/uMPBQjsf2xYaodZ.png"
           />
         </a-avatar>
         <a-statistic
-          :title="$t('workplace.newDay')"
+          :title="$t('workplace.announced')"
           :value="8874"
           :value-from="0"
           animation
@@ -82,11 +82,11 @@
         <a-avatar :size="54" class="col-avatar">
           <img
             alt="avatar"
-            src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/c8b36e26d2b9bb5dbf9b74dd6d7345af.svg~tplv-49unhts6dw-image.image"
+            src="//s2.loli.net/2024/01/19/2nCWBHTgrwMZXa7.png"
           />
         </a-avatar>
         <a-statistic
-          :title="$t('workplace.newFromYesterday')"
+          :title="$t('workplace.AIqa')"
           :value="2.8"
           :precision="1"
           :value-from="0"
