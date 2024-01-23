@@ -5,7 +5,7 @@
     :header-style="{ paddingBottom: '0' }"
     :body-style="{ paddingTop: '20px' }"
   >
-    <Chart style="height: calc(40vh - 46px)" :option="chartOption" />
+    <Chart style="height: calc(40vh - 42px)" :option="chartOption" />
   </a-card>
 </template>
 

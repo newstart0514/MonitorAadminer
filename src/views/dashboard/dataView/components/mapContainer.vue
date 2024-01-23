@@ -419,9 +419,9 @@
   };
   const chartOption = {
     title: {
-      text: '全国主要城市空气质量 - 百度地图',
-      subtext: 'data from PM25.in',
-      sublink: 'http://www.pm25.in',
+      text: '学生出行地点分布',
+      subtext: '数据来源于系统记录',
+      // sublink: 'http://www.pm25.in',
       left: 'center',
     },
     tooltip: {
@@ -550,7 +550,7 @@
     },
     series: [
       {
-        name: 'pm2.5',
+        name: '出行地点人数',
         type: 'scatter',
         coordinateSystem: 'bmap',
         data: convertData(data),

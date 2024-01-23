@@ -16,12 +16,24 @@
           <TeamTravel />
         </a-grid-item>
       </a-grid>
+      <a-grid :cols="24" :col-gap="16" :row-gap="16" style="margin-top: 16px;">
+        <a-grid-item
+          :span="{ xs: 24, sm: 24, md: 24, lg: 12, xl: 12, xxl: 12 }"
+        >
+          <TeamPlan />
+        </a-grid-item>
+        <a-grid-item
+          :span="{ xs: 24, sm: 24, md: 24, lg: 12, xl: 12, xxl: 12 }"
+        >
+          <AiData />
+        </a-grid-item>
+      </a-grid>
     </div>
     <div class="right-side">
       <a-grid :cols="24" :row-gap="16">
         <a-grid-item :span="24">
           <div class="panel moduler-wrap">
-            <dangerDate />
+            <TopSum />
           </div>
         </a-grid-item>
         <a-grid-item :span="24">
@@ -29,17 +41,6 @@
             <TravelData />
           </div>
         </a-grid-item>
-      </a-grid>
-    </div>
-  </div>
-  <div class="container">
-    <div class="left-side">
-      <div class="panel">
-        <mapContainer />
-      </div>
-    </div>
-    <div class="right-side">
-      <a-grid :cols="24" :row-gap="16">
         <a-grid-item :span="24">
           <div class="panel moduler-wrap">
             <DangerDate />
@@ -56,6 +57,9 @@
   import PersonalTravel from './components/personalTravel.vue';
   import TeamTravel from './components/teamTravel.vue';
   import TravelData from './components/travelData.vue';
+  import TeamPlan from './components/teamPlan.vue';
+  import AiData from './components/aiData.vue';
+  import TopSum from './components/topSum.vue';
 </script>
 
 <script lang="ts">

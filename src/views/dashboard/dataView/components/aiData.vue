@@ -1,7 +1,7 @@
 <template>
   <a-card
     class="general-card"
-    :title="$t('dataview.personal')"
+    :title="$t('dataview.aiData')"
     :header-style="{ paddingBottom: '0' }"
     :body-style="{ paddingTop: '20px' }"
   >
@@ -22,7 +22,7 @@
     },
     toolbox: {
       feature: {
-        dataView: { show: true, readOnly: false },
+        dataView: { show: true, readOnly: true },
         magicType: { show: true, type: ['line', 'bar'] },
         restore: { show: true },
         saveAsImage: { show: true },
