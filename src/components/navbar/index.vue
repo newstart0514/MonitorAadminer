@@ -8,7 +8,7 @@
           src="//s2.loli.net/2024/01/19/236uKiZFcmO1Bjh.png"
         />
         <a-typography-title
-          :style="{ margin: 0, fontSize: '18px', fontWeight: '600' }"
+          :style="{ margin: 0, fontSize: '17px', fontWeight: '600' }"
           :heading="5"
         >
           智能出行安全监控系统

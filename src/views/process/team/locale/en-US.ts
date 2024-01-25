@@ -36,6 +36,7 @@ export default {
   'basicProfile.cell.pass': 'Pass',
   'basicProfile.cell.auditing': 'Auditing',
   'basicProfile.cell.view': 'View',
+  // table
   'searchTable.form.number': 'Set Number',
   'searchTable.form.number.placeholder': 'Please enter Set Number',
   'searchTable.form.name': 'Set Name',
@@ -77,4 +78,5 @@ export default {
   'searchTable.actions.refresh': 'refresh',
   'searchTable.actions.density': 'density',
   'searchTable.actions.columnSetting': 'columnSetting',
+  'menu.list.searchTable': 'Team travel process list',
 };

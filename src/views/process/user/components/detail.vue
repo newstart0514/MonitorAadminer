@@ -1,5 +1,5 @@
 <template>
-  <Breadcrumb :items="['menu.process.team', 'menu.profile']" />
+  <Breadcrumb :items="['menu.process.user', 'menu.profile']" />
   <a-space direction="vertical" :size="16" fill>
     <a-card class="general-card" :title="$t('basicProfile.title.form')">
       <template #extra>

@@ -36,6 +36,7 @@ export default {
   'basicProfile.cell.pass': '已通过',
   'basicProfile.cell.auditing': '审核中',
   'basicProfile.cell.view': '查看',
+  // table
   'searchTable.form.number': '集合编号',
   'searchTable.form.number.placeholder': '请输入集合编号',
   'searchTable.form.name': '集合名称',
@@ -78,4 +79,5 @@ export default {
   'searchTable.actions.refresh': '刷新',
   'searchTable.actions.density': '密度',
   'searchTable.actions.columnSetting': '列设置',
+  'menu.list.searchTable': '团队出行流程列表',
 };
