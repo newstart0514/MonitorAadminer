@@ -5,12 +5,18 @@ import localeWorkplace from '@/views/dashboard/workplace/locale/zh-CN';
 import localeDateview from '@/views/dashboard/dataView/locale/zh-CN';
 import localeProcessTeam from '@/views/process/team/locale/zh-CN';
 import localeProcessUser from '@/views/process/user/locale/zh-CN';
+import localeServicesChatapp from '@/views/services/chatapp/locale/zh-CN';
+import localeServicesMessage from '@/views/services/message/locale/zh-CN';
+import localeServicesPhone from '@/views/services/phone/locale/zh-CN';
+import localeServicesAi from '@/views/services/ai/locale/zh-CN';
+import localeServicesMap from '@/views/services/map/locale/zh-CN';
 
 import localeSettings from './zh-CN/settings';
 
 export default {
   'menu.dashboard': '仪表盘',
   'menu.process': '流程管理',
+  'menu.service': '服务管理',
   'menu.server.dashboard': '仪表盘-服务端',
   'menu.server.workplace': '工作台-服务端',
   'menu.server.monitor': '实时监控-服务端',
@@ -31,4 +37,9 @@ export default {
   ...localeDateview,
   ...localeProcessTeam,
   ...localeProcessUser,
+  ...localeServicesChatapp,
+  ...localeServicesMessage,
+  ...localeServicesPhone,
+  ...localeServicesAi,
+  ...localeServicesMap,
 };
