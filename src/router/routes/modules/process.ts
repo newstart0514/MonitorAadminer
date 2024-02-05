@@ -13,6 +13,16 @@ const PROCESS: AppRouteRecordRaw = {
   },
   children: [
     {
+      path: 'danger',
+      name: 'danger',
+      component: () => import('@/views/process/danger/index.vue'),
+      meta: {
+        locale: 'menu.process.danger',
+        requiresAuth: true,
+        roles: ['*'],
+      },
+    },
+    {
       path: 'team',
       name: 'team',
       component: () => import('@/views/process/team/index.vue'),

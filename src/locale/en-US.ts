@@ -3,6 +3,7 @@ import localeLogin from '@/views/login/locale/en-US';
 
 import localeWorkplace from '@/views/dashboard/workplace/locale/en-US';
 import localeDateview from '@/views/dashboard/dataView/locale/en-US';
+import localeProcessDanger from '@/views/process/danger/locale/en-US';
 import localeProcessTeam from '@/views/process/team/locale/en-US';
 import localeProcessUser from '@/views/process/user/locale/en-US';
 import localeServicesChatapp from '@/views/services/chatapp/locale/en-US';
@@ -41,4 +42,5 @@ export default {
   ...localeServicesPhone,
   ...localeServicesAi,
   ...localeServicesMap,
+  ...localeProcessDanger
 };
