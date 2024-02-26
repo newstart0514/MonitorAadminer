@@ -5,13 +5,14 @@ import { UserState } from '@/store/modules/user/types';
 export interface LoginData {
   username: string;
   password: string;
+  captcha: string;
 }
 
 export interface LoginRes {
   token: string;
 }
 export function login(data: LoginData) {
-  return axios.post<LoginRes>('/api/user/login', data);
+  return axios.post<LoginRes>('/user/login', data);
 }
 
 export function logout() {
