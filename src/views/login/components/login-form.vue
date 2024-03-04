@@ -17,7 +17,7 @@
         hide-label
       >
         <a-input
-          v-model="userInfo.username"
+          v-model="userInfo.email"
           :placeholder="$t('login.form.userName.placeholder')"
         >
           <template #prefix>
@@ -41,6 +41,30 @@
           </template>
         </a-input-password>
       </a-form-item>
+      <a-form-item
+        field="captcha"
+        :rules="[{ required: true, message: $t('login.form.captcha.errMsg') }]"
+        :validate-trigger="['change', 'blur']"
+        hide-label
+      >
+        <a-input
+          v-model="userInfo.captcha"
+          :placeholder="$t('login.form.captcha.placeholder')"
+        >
+          <template #prefix>
+            <icon-email />
+          </template>
+          <template #append>
+            <a-button
+              type="primary"
+              :loading="emailLoading"
+              @click="handleSearch"
+            >
+              获取验证码
+            </a-button>
+          </template>
+        </a-input>
+      </a-form-item>
       <a-space :size="16" direction="vertical">
         <div class="login-form-password-actions">
           <a-checkbox
@@ -55,9 +79,9 @@
         <a-button type="primary" html-type="submit" long :loading="loading">
           {{ $t('login.form.login') }}
         </a-button>
-        <a-button type="text" long class="login-form-register-btn">
+        <!-- <a-button type="text" long class="login-form-register-btn">
           {{ $t('login.form.register') }}
-        </a-button>
+        </a-button> -->
       </a-space>
     </a-form>
   </div>
@@ -73,6 +97,7 @@
   import { useUserStore } from '@/store';
   import useLoading from '@/hooks/loading';
   import type { LoginData } from '@/api/user';
+  import { getCaptcha } from '@/api/user';
 
   const router = useRouter();
   const { t } = useI18n();
@@ -82,13 +107,15 @@
 
   const loginConfig = useStorage('login-config', {
     rememberPassword: true,
-    username: '',
+    email: '',
     password: '',
   });
   const userInfo = reactive({
-    username: loginConfig.value.username,
+    email: loginConfig.value.email,
     password: loginConfig.value.password,
+    captcha: '',
   });
+  const emailLoading = ref(false);
 
   const handleSubmit = async ({
     errors,
@@ -122,6 +149,11 @@
         setLoading(false);
       }
     }
+  };
+  const handleSearch = async () => {
+    if (emailLoading.value) emailLoading.value = true;
+    const res = await getCaptcha({ email: userInfo.email });
+    console.log(res);
   };
   const setRememberPassword = (value: boolean) => {
     loginConfig.value.rememberPassword = value;
