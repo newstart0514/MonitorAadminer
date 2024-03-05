@@ -6,6 +6,8 @@ export default {
   'login.form.captcha.errMsg': '验证码不能为空',
   'login.form.login.errMsg': '登录出错，轻刷新重试☹',
   'login.form.login.success': '登录成功，欢迎回来🎉！',
+  'login.form.getCaptcha.success': '发送验证码成功，请您查看您的邮箱🤗',
+  'login.form.getCaptcha.errMsg': '发送验证码失败，请您检查您的邮箱地址🤔',
   'login.form.userName.placeholder': '请输入用户名',
   'login.form.password.placeholder': '请输入密码',
   'login.form.captcha.placeholder': '请输入验证码',

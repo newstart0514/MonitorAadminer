@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia';
 import {
   login as userLogin,
-  logout as userLogout,
   getUserInfo,
   LoginData,
 } from '@/api/user';
@@ -12,22 +11,18 @@ import useAppStore from '../app';
 
 const useUserStore = defineStore('user', {
   state: (): UserState => ({
-    name: undefined,
-    avatar: undefined,
-    job: undefined,
-    organization: undefined,
-    location: undefined,
-    email: undefined,
-    introduction: undefined,
-    personalWebsite: undefined,
-    jobName: undefined,
-    organizationName: undefined,
-    locationName: undefined,
-    phone: undefined,
-    registrationDate: undefined,
-    accountId: undefined,
-    certification: undefined,
-    role: '',
+    id: 0,
+    username: '',
+    name: '',
+    avatar: '',
+    email: '',
+    phone: '',
+    student_id: '',
+    from: '',
+    guardian_name: '',
+    guardian_phone: '',
+    is_forzen: false,
+    role: 'user',
   }),
 
   getters: {
@@ -60,11 +55,11 @@ const useUserStore = defineStore('user', {
       this.setInfo(res.data);
     },
 
-    // Login
+    // Login doing:登录接口数据对接
     async login(loginForm: LoginData) {
       try {
         const res = await userLogin(loginForm);
-        setToken(res.data.token);
+        setToken(res.data.access_token);
       } catch (err) {
         clearToken();
         throw err;
@@ -79,11 +74,7 @@ const useUserStore = defineStore('user', {
     },
     // Logout
     async logout() {
-      try {
-        await userLogout();
-      } finally {
-        this.logoutCallBack();
-      }
+      clearToken();
     },
   },
 });

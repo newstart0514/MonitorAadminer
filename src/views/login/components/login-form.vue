@@ -17,7 +17,7 @@
         hide-label
       >
         <a-input
-          v-model="userInfo.email"
+          v-model="userInfo.username"
           :placeholder="$t('login.form.userName.placeholder')"
         >
           <template #prefix>
@@ -107,11 +107,11 @@
 
   const loginConfig = useStorage('login-config', {
     rememberPassword: true,
-    email: '',
+    username: '',
     password: '',
   });
   const userInfo = reactive({
-    email: loginConfig.value.email,
+    username: loginConfig.value.username,
     password: loginConfig.value.password,
     captcha: '',
   });
@@ -152,8 +152,12 @@
   };
   const handleSearch = async () => {
     if (emailLoading.value) emailLoading.value = true;
-    const res = await getCaptcha({ email: userInfo.email });
-    console.log(res);
+    const res = await getCaptcha({ address: '1418591636@qq.com' });
+    if (res?.ok) {
+      Message.success(t('login.form.getCaptcha.success'));
+    } else {
+      Message.error(t('login.form.getCaptcha.errMsg'));
+    }
   };
   const setRememberPassword = (value: boolean) => {
     loginConfig.value.rememberPassword = value;

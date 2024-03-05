@@ -9,7 +9,7 @@ export interface LoginData {
   captcha: string;
 }
 export interface CaptchData {
-  email: string;
+  address: string;
 }
 
 export interface LoginRes {
