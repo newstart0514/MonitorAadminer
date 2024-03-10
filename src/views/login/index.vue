@@ -4,7 +4,7 @@
       <img
         alt="logo"
         style="width: 30px;"
-        src="//s2.loli.net/2024/01/19/236uKiZFcmO1Bjh.png"
+        src="//s2.loli.net/2024/02/25/sKm46pk1nIFJSZH.webp"
       />
       <div class="logo-text">智能出行安全监控系统</div>
     </div>

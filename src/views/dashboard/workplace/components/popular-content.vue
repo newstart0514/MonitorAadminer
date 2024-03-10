@@ -18,13 +18,7 @@
           @change="typeChange as any"
         >
           <a-radio value="text">
-            {{ $t('workplace.popularContent.text') }}
-          </a-radio>
-          <a-radio value="image">
-            {{ $t('workplace.popularContent.image') }}
-          </a-radio>
-          <a-radio value="video">
-            {{ $t('workplace.popularContent.video') }}
+            {{ $t('workplace.popularContent.carTeam') }}
           </a-radio>
         </a-radio-group>
         <a-table

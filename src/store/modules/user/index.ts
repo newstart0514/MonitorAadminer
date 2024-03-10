@@ -3,8 +3,9 @@ import {
   login as userLogin,
   getUserInfo,
   LoginData,
+  refresh,
 } from '@/api/user';
-import { setToken, clearToken } from '@/utils/auth';
+import { setToken, clearToken, setRefreshToken, getRefreshToken } from '@/utils/auth';
 import { removeRouteListener } from '@/utils/route-listener';
 import { UserState } from './types';
 import useAppStore from '../app';
@@ -55,11 +56,26 @@ const useUserStore = defineStore('user', {
       this.setInfo(res.data);
     },
 
-    // Login doing:登录接口数据对接
+    // Login
     async login(loginForm: LoginData) {
       try {
         const res = await userLogin(loginForm);
-        setToken(res.data.access_token);
+        setToken(res.data.accessToken);
+        setRefreshToken(res.data.refreshToken);
+        this.setInfo(res.data.userInfo);
+      } catch (err) {
+        clearToken();
+        throw err;
+      }
+    },
+    // 刷新token
+    async refresh() {
+      try {
+        const token = getRefreshToken();
+        const res = await refresh({ refresh_token: token });
+        setToken(res.data.accessToken);
+        setRefreshToken(res.data.refreshToken);
+        this.setInfo(res.data.userInfo);
       } catch (err) {
         clearToken();
         throw err;

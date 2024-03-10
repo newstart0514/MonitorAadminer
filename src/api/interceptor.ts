@@ -1,8 +1,9 @@
 import axios from 'axios';
 import type { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { Message, Modal } from '@arco-design/web-vue';
-// import { useUserStore } from '@/store';
+import { useUserStore } from '@/store';
 import { getToken } from '@/utils/auth';
+import router from '@/router';
 
 export interface HttpResponse<T = unknown> {
   status: number;
@@ -69,7 +70,17 @@ axios.interceptors.response.use(
     }
     return res;
   },
-  (error) => {
+  async (error) => {
+    if (error.response.status === 401) {
+      try {
+        const userStore = useUserStore();
+        await userStore.refresh();
+        return axios(error.config);
+      } catch (err) {
+        router.push('/login');
+        return Promise.reject(err);
+      }
+    }
     Message.error({
       content: error.msg || 'Request Error',
       duration: 5 * 1000,

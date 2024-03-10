@@ -31,9 +31,7 @@ export default {
   'workplace.viewMore': 'More',
   'workplace.contentData': 'Number of AI Q&A usages',
   'workplace.popularContent': 'Popular Content',
-  'workplace.popularContent.text': 'text',
-  'workplace.popularContent.image': 'image',
-  'workplace.popularContent.video': 'video',
+  'workplace.popularContent.carTeam': 'carTeam',
   'workplace.categoriesPercent': 'Categories Percent',
   'workplace.pecs': 'pecs',
 };

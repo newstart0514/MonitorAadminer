@@ -58,9 +58,10 @@
             <a-button
               type="primary"
               :loading="emailLoading"
+              :disabled="emailDisable"
               @click="handleSearch"
             >
-              获取验证码
+              获取验证码 {{ emailDisable ? ` ${emailSecond}秒` : ''}}
             </a-button>
           </template>
         </a-input>
@@ -116,6 +117,8 @@
     captcha: '',
   });
   const emailLoading = ref(false);
+  const emailDisable = ref(false);
+  const emailSecond = ref(60);
 
   const handleSubmit = async ({
     errors,
@@ -151,13 +154,22 @@
     }
   };
   const handleSearch = async () => {
-    if (emailLoading.value) emailLoading.value = true;
+    emailLoading.value = true;
     const res = await getCaptcha({ address: '1418591636@qq.com' });
     if (res?.ok) {
       Message.success(t('login.form.getCaptcha.success'));
+      emailDisable.value = true;
+      const id = setInterval(() => {
+        emailSecond.value -= 1;
+        if (emailSecond.value === 0) {
+          emailDisable.value = false;
+          clearInterval(id);
+        }
+      }, 1000);
     } else {
       Message.error(t('login.form.getCaptcha.errMsg'));
     }
+    emailLoading.value = false;
   };
   const setRememberPassword = (value: boolean) => {
     loginConfig.value.rememberPassword = value;

@@ -29,10 +29,8 @@ export default {
   'workplace.loadMore': '加载更多',
   'workplace.viewMore': '查看更多',
   'workplace.contentData': 'AI问答使用数',
-  'workplace.popularContent': '线上热门内容',
-  'workplace.popularContent.text': '文本',
-  'workplace.popularContent.image': '图片',
-  'workplace.popularContent.video': '视频',
+  'workplace.popularContent': '热门内容',
+  'workplace.popularContent.carTeam': '包车出行',
   'workplace.categoriesPercent': '内容类型占比',
   'workplace.pecs': '个',
 };

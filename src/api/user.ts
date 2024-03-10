@@ -11,9 +11,21 @@ export interface LoginData {
 export interface CaptchData {
   address: string;
 }
+export interface RefreshData {
+  refresh_token: string;
+}
 
 export interface LoginRes {
-  token: string;
+  userInfo: {
+    id: number;
+    username: string;
+    name: string;
+    email: string;
+    avatar: string;
+    role: string;
+  };
+  accessToken: string;
+  refreshToken: string;
 }
 
 export function login(data: LoginData) {
@@ -22,6 +34,10 @@ export function login(data: LoginData) {
 
 export function getCaptcha(params: CaptchData) {
   return axios.get<noDataRes>('/user/captcha', { params });
+}
+
+export function refresh(params: RefreshData) {
+  return axios.get<LoginRes>('/user/refresh', { params });
 }
 
 export function logout() {
