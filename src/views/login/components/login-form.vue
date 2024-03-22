@@ -142,7 +142,7 @@
         Message.success(t('login.form.login.success'));
         const { rememberPassword } = loginConfig.value;
         const { username, password } = values;
-        // 实际生产环境需要进行加密存储。
+        // 实际生产环境需要进行加密存储
         // The actual production environment requires encrypted storage.
         loginConfig.value.username = rememberPassword ? username : '';
         loginConfig.value.password = rememberPassword ? password : '';

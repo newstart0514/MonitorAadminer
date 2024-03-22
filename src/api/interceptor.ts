@@ -65,8 +65,9 @@ axios.interceptors.response.use(
     //   }
     //   return Promise.reject(new Error(res.msg || 'Error'));
     // }
+    // eslint-disable-next-line no-console
     if (!res.ok) {
-      return Promise.reject(new Error(res.data || 'Error'));
+      return Promise.reject(new Error(res.message || 'Error'));
     }
     return res;
   },
@@ -82,9 +83,9 @@ axios.interceptors.response.use(
       }
     }
     Message.error({
-      content: error.msg || 'Request Error',
+      content: error.response.data.message || 'Request Error',
       duration: 5 * 1000,
     });
-    return Promise.reject(error);
+    return Promise.reject(error.response.data);
   }
 );
